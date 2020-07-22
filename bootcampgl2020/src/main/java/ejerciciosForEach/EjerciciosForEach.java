@@ -19,6 +19,15 @@ public class EjerciciosForEach {
 		for(String dia:dias) {
 			System.out.println("Dia de la semana: " + dia);
 		}
+		
+		/*Ejercicio 4.11*/
+		
+		String cadena = "Bootcamp 2020";
+		for(char caracter:cadena.toCharArray()) {
+			System.out.println("Letra: " + caracter);
+		}
+		
+		
 
 	}
 
