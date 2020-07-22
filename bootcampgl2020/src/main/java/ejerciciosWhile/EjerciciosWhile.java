@@ -1,4 +1,4 @@
-package com.globallogic.app;
+package ejerciciosWhile;
 
 public class EjerciciosWhile {
 

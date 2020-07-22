@@ -1,4 +1,4 @@
-package com.globallogic.app;
+package ejerciciosFor;
 
 public class EjerciciosFor {
 
