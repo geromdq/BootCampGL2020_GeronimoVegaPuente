@@ -1,4 +1,4 @@
-package com.globallogic.app;
+package estructurasBasicas;
 
 import java.util.ArrayList;
 import java.util.List;
