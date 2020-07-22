@@ -11,7 +11,23 @@ public class EjerciciosWhile {
 			System.out.println("Valor iterado: " + i);
 			i++;
 		}
-
+		
+		
+		
+		/*Ejercicio 4.8*/
+		
+		i=0;
+		while(i<=50) {
+			if(i % 2 == 0) {
+				System.out.println("Valor iterado " + i + " par");
+			}
+			else
+			{
+				System.out.println("Valor iterado " + i + " impar");
+			}
+			i++;
+		}
 	}
-
 }
+
+
