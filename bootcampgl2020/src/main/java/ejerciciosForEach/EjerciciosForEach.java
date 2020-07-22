@@ -10,6 +10,15 @@ public class EjerciciosForEach {
 				System.out.println("Valor iterado: " + num);
 			}
 		}
+		
+		/*Ejercicio 4.10*/
+		
+		String [] dias = {"Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo" 
+		};
+		
+		for(String dia:dias) {
+			System.out.println("Dia de la semana: " + dia);
+		}
 
 	}
 
