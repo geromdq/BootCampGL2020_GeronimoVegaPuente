@@ -3,7 +3,7 @@ package com.globallogic.app;
 public class TiposPrimitivos {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		int myNum = 15;
 		System.out.println("El valor de mi numero es " + myNum);
 		char Char = 'a';
