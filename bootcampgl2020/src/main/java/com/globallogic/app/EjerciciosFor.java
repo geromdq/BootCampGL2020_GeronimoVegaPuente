@@ -12,13 +12,26 @@ public class EjerciciosFor {
 		
 		
 		/*Ejercicio 4.5*/
+		
 		int cont = 0;
-		for(int j = 0 ; j <= 10000 ; j++) {
-			if(j % 20==0) {
+		for(int i = 0 ; i <= 10000 ; i++) {
+			if(i % 20==0) {
 				cont++;
 			}
 		}
-		System.out.println(cont);
+		System.out.println("El contador final es: " + cont);
+		
+		
+		
+		/*Ejercicio 4.6*/
+		
+		String [] dias = {"Lunes","Martes","Miercoles","Jueves","Viernes","Sabado","Domingo" 
+		};
+		
+		for(int i = 0 ; i < dias.length ; i++) {
+			System.out.println("Dia de la semana: " + dias[i] + "\n");
+		}
 	}
+	
 
 }
