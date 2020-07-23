@@ -2,8 +2,8 @@ package estructurasBasicas;
 
 public class Empleado {
 	
-	static double salario;
-	static String nombre = "Alex";
+	private static double salario;
+	private static String nombre = "Alex";
 	public static double getSalario() {
 		return salario;
 	}
