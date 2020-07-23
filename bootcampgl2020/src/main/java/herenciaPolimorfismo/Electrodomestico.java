@@ -1,4 +1,4 @@
-package PilaresPOO;
+package herenciaPolimorfismo;
 
 public class Electrodomestico {
 	
