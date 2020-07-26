@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface InterfaceAnimal {
+public interface Animal {
 	
 	
 	default void come(String s) {

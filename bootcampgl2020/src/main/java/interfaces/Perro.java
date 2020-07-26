@@ -1,6 +1,6 @@
 package interfaces;
 
-public class Perro implements InterfaceAnimal{
+public class Perro implements Animal{
 
 	@Override
 	public void dormir() {
