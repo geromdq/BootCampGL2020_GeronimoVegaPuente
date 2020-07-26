@@ -1,5 +1,4 @@
 package clasesObjetos;
-import java.util.List;
 import java.util.Scanner;
 
 public class Menu {

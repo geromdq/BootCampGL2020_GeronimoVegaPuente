@@ -1,6 +1,5 @@
 package clasesObjetos;
 
-import java.util.List;
 
 public class MainClasesObjetos {
 
