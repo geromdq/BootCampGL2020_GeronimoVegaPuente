@@ -2,19 +2,19 @@ package encapsulamiento;
 
 public class Gato {
 	
-	private String nombre;
+	private String name;
 	private int patas;
 	
-	public String getNombre() {
-		return nombre;
+	public String getname() {
+		return name;
 	}
 	
 	public int getPatas() {
 		return patas;
 	}
 	
-	public void setNombre(String nuevoNombre) {		
-		nombre = nuevoNombre;		
+	public void setname(String nuevoname) {		
+		name = nuevoname;		
 	}
 	
 	public void setPatas(int numeroPatas) {
