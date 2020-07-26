@@ -1,19 +1,16 @@
 package clasesObjetos;
 
+import java.util.List;
+
 public class MainClasesObjetos {
 
 	public static void main(String[] args) {
-
-
-		Empleado Employee = new Empleado();
-		Employee.setSueldoBase(100);
-		Employee.setTipoIRPF(15);
-		Employee.setHorasExtrasRealizadasEnElMEs(4);
-		Employee.setCasado(true);
-		Employee.setNumeroHijos(2);
+		Menu m = new Menu();
+		m.requestAmountEmployees();
+		m.askData();
+		m.setValueExtraHour();
+		m.sortAndPrintEmployees();
 		
-		System.out.println(Employee.calcularRetenciones());
-
 	}
 
 }

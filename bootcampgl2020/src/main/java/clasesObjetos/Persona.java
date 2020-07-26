@@ -2,27 +2,37 @@ package clasesObjetos;
 
 public class Persona {
 	
-	protected String nombre;
-	protected boolean casado;
-	protected int numeroHijos;
+	protected String name;
+	protected boolean civilStatus;
+	protected int childsNumber;
 	
-	public String getNombre() {
-		return nombre;
+	public Persona () {
+		
 	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	
+	public Persona(String name , boolean civilStatus, int childsNumber) {
+		this.name = name;
+		this.civilStatus = civilStatus;
+		this.childsNumber = childsNumber;
 	}
-	public boolean isCasado() {
-		return casado;
+	
+	public String getname() {
+		return name;
 	}
-	public void setCasado(boolean casado) {
-		this.casado = casado;
+	public void setname(String name) {
+		this.name = name;
 	}
-	public int getNumeroHijos() {
-		return numeroHijos;
+	public boolean iscivilStatus() {
+		return civilStatus;
 	}
-	public void setNumeroHijos(int numeroHijos) {
-		this.numeroHijos = numeroHijos;
+	public void setcivilStatus(boolean civilStatus) {
+		this.civilStatus = civilStatus;
+	}
+	public int getchildsNumber() {
+		return childsNumber;
+	}
+	public void setchildsNumber(int childsNumber) {
+		this.childsNumber = childsNumber;
 	}
 
 }

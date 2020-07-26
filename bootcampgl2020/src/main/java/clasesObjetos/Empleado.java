@@ -1,36 +1,54 @@
 package clasesObjetos;
 
-public class Empleado extends Persona{
+public class Empleado extends Persona implements Comparable<Empleado>{
 	
 	private int ID;	
-	private double sueldoBase;
-	private int horasExtrasEnElMEs;
-	private double tipoIRPF;
-	private static double importeHoraExtra = 10;
+    private static int IDCounter = 0;
+	private double baseSalary;
+	private int extraHours;
+	private double IRPFtype;
+	private static double valueExtraHour = 10;
 	
 	public Empleado() {
-		
+		this.ID = IDCounter++;
+	}	
+	
+	public Empleado(String name, boolean civilStatus,  int childsNumber, double baseSalary, int extraHours,double iRPFtype) {
+		super(name, civilStatus, childsNumber);
+		this.ID = IDCounter++;
+		this.baseSalary = baseSalary;
+		this.extraHours = extraHours;
+		IRPFtype = iRPFtype;
 	}
 	
-	public Empleado (int identificador) {
-		ID = identificador;
+	
+
+	public double calculateAdditionalextraHours() {
+		return (valueExtraHour * (double)extraHours);
 	}
 	
-	public double calcularAdicionalHorasExtras() {
-		return (importeHoraExtra * (double)horasExtrasEnElMEs);
+	public double calculateGrossSalary() {
+		double grossSalary = (baseSalary + calculateAdditionalextraHours());
+		return grossSalary;
 	}
 	
-	public double calcularSueldoBruto() {
-		return (sueldoBase += calcularAdicionalHorasExtras());
-	}
-	
-	public double calcularRetenciones() {
-		if(casado==true) {
-			tipoIRPF -=2;
+	public double calculateTaxes() {
+		double IRPF = IRPFtype;
+		if(civilStatus==true) {
+			IRPF -=2;
 		}
-		tipoIRPF-=numeroHijos;
-		return (calcularSueldoBruto()*(tipoIRPF/100));
-		
+		IRPF-=childsNumber;
+		return (calculateGrossSalary()*(IRPF/100));		
+	}
+	
+	public double calculateNetSalary() {
+		return (calculateGrossSalary()-calculateTaxes());
+	}
+	
+	public String toString() {
+		return (this.ID + " " + this.name + "\n Sueldo Base: " + this.baseSalary + "\n Horas extras: " +
+				this.extraHours + "\n tipo IRPF: " + this.IRPFtype + "\n civilStatus: " + this.civilStatus + 
+				"\n Numero de hijos: " + this.childsNumber); 
 	}
 	
 
@@ -38,40 +56,44 @@ public class Empleado extends Persona{
 		return ID;
 	}
 
-	public void setID(int iD) {
-		ID = iD;
+	public double getbaseSalary() {
+		return baseSalary;
 	}
 
-	public double getSueldoBase() {
-		return sueldoBase;
+	public void setbaseSalary(double baseSalary) {
+		this.baseSalary = baseSalary;
 	}
 
-	public void setSueldoBase(float sueldoBase) {
-		this.sueldoBase = sueldoBase;
+	public int getextraHours() {
+		return extraHours;
 	}
 
-	public int getHorasExtrasRealizadasEnElMEs() {
-		return horasExtrasEnElMEs;
+	public void setextraHours(int extraHours) {
+		this.extraHours = extraHours;
 	}
 
-	public void setHorasExtrasRealizadasEnElMEs(int horasExtrasRealizadasEnElMEs) {
-		this.horasExtrasEnElMEs = horasExtrasRealizadasEnElMEs;
+	public double getIRPFtype() {
+		return IRPFtype;
 	}
 
-	public double getTipoIRPF() {
-		return tipoIRPF;
+	public void setIRPFtype(double IRPFtype) {
+		this.IRPFtype = IRPFtype;
 	}
 
-	public void setTipoIRPF(double tipoIRPF) {
-		this.tipoIRPF = tipoIRPF;
+	public static double getValueExtraHour() {
+		return valueExtraHour;
 	}
 
-	public static double getImporteHoraExtra() {
-		return importeHoraExtra;
+	public static void setValueExtraHour(double importeHoraExtra) {
+		Empleado.valueExtraHour = importeHoraExtra;
 	}
 
-	public static void setImporteHoraExtra(float importeHoraExtra) {
-		Empleado.importeHoraExtra = importeHoraExtra;
+	@Override
+	public int compareTo(Empleado o) {
+		if (this.calculateNetSalary() < o.calculateNetSalary()) {
+			return 1;
+		}
+		else return -1;
 	}
 	
 	
