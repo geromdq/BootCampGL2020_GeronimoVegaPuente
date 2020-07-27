@@ -30,6 +30,7 @@ public class Hombre implements Animal,Persona {
 		hombre.hablar();
 		hombre.sonidoAnimal();
 		hombre.come();
+		
 	}
 	
 
