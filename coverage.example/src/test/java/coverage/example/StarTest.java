@@ -37,7 +37,6 @@ public class StarTest {
 	
 	@Test
 	void setPlanetsTest() {
-		assertNotEquals(planetList, star.getPlanets());		
 		star.setPlanets(this.planetList);
 		/*List<Planet> planetList2 = star.getPlanets();
 		planetList2.add(neptune);
