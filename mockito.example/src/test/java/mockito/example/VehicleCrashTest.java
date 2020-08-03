@@ -17,16 +17,13 @@ import mockito.example.model.Vehicle;
 class VehicleCrashTest {
 	
 	@InjectMocks
-	VehicleCrash crashTest;
-	
-
-	
+	VehicleCrash crashTest;	
 	
 	@Mock
 	Vehicle vehicleMock = mock(Vehicle.class);
 	
-	@BeforeAll
-	public void Before(){
+	
+	void Before(){
 		crashTest = new VehicleCrash();		
 	}
 	
