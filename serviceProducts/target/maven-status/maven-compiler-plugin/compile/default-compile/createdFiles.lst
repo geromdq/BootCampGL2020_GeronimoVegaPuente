@@ -1,0 +1,5 @@
+com\globallogic\bootcampgl\ServiceProductsApplication.class
+com\globallogic\bootcampgl\controller\ProductServiceController.class
+com\globallogic\bootcampgl\service\impl\ProductServiceImpl.class
+com\globallogic\bootcampgl\service\ProductService.class
+com\globallogic\bootcampgl\dto\ProductDTO.class
