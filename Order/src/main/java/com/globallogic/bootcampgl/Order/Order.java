@@ -1,13 +1,17 @@
 package com.globallogic.bootcampgl.Order;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component("order")
+@Component	
 public class Order {
 	
-	private String product = "C-00221";
-	private int count = 1000;
-	private int customer = 12342;
+	@Value("${in.product}")
+	private String product;
+	@Value("${in.count}")
+	private int count;
+	@Value("${in.customer}")
+	private int customer;
 	
 	public String toString() {
 		return "Product: " + product + " count: " + count + " customer: " + customer;

@@ -20,6 +20,9 @@ public class ProductApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println(productRepository.getById("C-0021").toString());
+		System.out.println(args[1]);
+		System.out.println(args[2]);
+		
 		
 	}
 
