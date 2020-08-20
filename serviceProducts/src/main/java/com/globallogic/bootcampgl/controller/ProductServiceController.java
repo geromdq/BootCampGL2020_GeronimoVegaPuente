@@ -20,16 +20,12 @@ import com.globallogic.bootcampgl.service.impl.ProductServiceImpl;
 public class ProductServiceController {
 	
 	@Autowired
-	ProductServiceImpl productService;
-
-	
-		
+	ProductServiceImpl productService;		
 	
 	@RequestMapping(value = "/products")
 	public ResponseEntity<Object> getProduct() {
 		return new ResponseEntity<>(productService.getProducts(), HttpStatus.OK);
 	}	
-
 	
 	@RequestMapping(value = "/products",method = RequestMethod.POST)
 	public ResponseEntity<Object> createProduct(@RequestBody ProductDTO product) {	
