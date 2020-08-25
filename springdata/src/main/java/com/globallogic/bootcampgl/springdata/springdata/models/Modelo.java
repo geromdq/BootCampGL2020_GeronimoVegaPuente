@@ -19,8 +19,8 @@ public class Modelo {
 	
 	@Id
 	 @GeneratedValue(strategy = GenerationType.AUTO)
-	private int codigo = 12345678;
-	private String marca = "Global Motors";	
-	private String nombre = "911 Programador";
+	private int codigo;
+	private String marca;	
+	private String nombre;
 
 }

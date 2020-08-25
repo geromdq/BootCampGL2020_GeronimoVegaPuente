@@ -20,8 +20,8 @@ public class Tipo {
 	
 	@Id
 	 @GeneratedValue(strategy = GenerationType.AUTO)
-	private int codigo = 12345;
-	private String categoria = "Sedan";	
-	private String puertas = "4";
+	private int codigo;
+	private String categoria;	
+	private String puertas;
 
 }

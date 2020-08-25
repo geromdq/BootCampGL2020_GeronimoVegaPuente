@@ -1,4 +1,4 @@
-package com.globallogic.bootcampgl.springdata.springdata.serviceImpl;
+package com.globallogic.bootcampgl.springdata.springdata.service;
 import java.util.ArrayList;
 import org.springframework.ui.Model;
 import java.util.Collection;
@@ -7,13 +7,14 @@ import java.util.Map;
 
 
 import javax.swing.event.ListSelectionEvent;
+import com.globallogic.bootcampgl.springdata.exception.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.globallogic.bootcampgl.springdata.springdata.models.Vehiculo;
 import com.globallogic.bootcampgl.springdata.springdata.repository.VehiculoRepository;
-import com.globallogic.bootcampgl.springdata.springdata.service.*;
+
 
 @Component
 public class VehiculoServiceImpl implements VehiculoService{
@@ -31,8 +32,17 @@ public class VehiculoServiceImpl implements VehiculoService{
 	}
 
 	@Override
-	public void createVehiculo(Vehiculo vehiculo) {
-		vehiculoRepository.save(vehiculo);		
+	public void createVehiculo(Vehiculo vehiculo) {		
+		try {
+			for (int i = 0; i <= LVehiculos.size(); i++) {
+				if (vehiculo.getCodigo() == LVehiculos.get(i).getCodigo()) {
+					throw new RepeatIdException();
+				}
+			}
+		} catch (Exception repeatIdException) {
+			System.out.println(repeatIdException.getMessage());
+		}
+		vehiculoRepository.save(vehiculo);	
 	}
 	
 	@Override

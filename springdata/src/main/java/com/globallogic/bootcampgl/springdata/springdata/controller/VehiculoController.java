@@ -13,7 +13,7 @@ import com.globallogic.bootcampgl.springdata.springdata.models.Modelo;
 import com.globallogic.bootcampgl.springdata.springdata.models.Tipo;
 import com.globallogic.bootcampgl.springdata.springdata.models.Vehiculo;
 import com.globallogic.bootcampgl.springdata.springdata.service.VehiculoService;
-import com.globallogic.bootcampgl.springdata.springdata.serviceImpl.VehiculoServiceImpl;
+import com.globallogic.bootcampgl.springdata.springdata.service.VehiculoServiceImpl;
 
 /**
  * Product Service Controller
@@ -30,7 +30,7 @@ public class VehiculoController {
 	}	
 	
 	@RequestMapping(value = "/vehicles",method = RequestMethod.POST)
-	public ResponseEntity<Object> createProduct(@RequestBody Vehiculo vehiculo) {	
+	public ResponseEntity<Object> createVehiculo(@RequestBody Vehiculo vehiculo) {	
 		vehiculoService.createVehiculo(vehiculo);
 		return  new ResponseEntity<>("Vehiculo was created successfully", HttpStatus.CREATED);
 	}

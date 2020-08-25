@@ -1,5 +1,7 @@
 package com.globallogic.bootcampgl.dto;
 
+import javax.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,7 +12,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class ProductDTO {
+	@NotNull
     private String id;
+	@NotNull
     private String name;
 
     public String getId() {
